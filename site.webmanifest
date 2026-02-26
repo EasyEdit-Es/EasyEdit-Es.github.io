@@ -1,0 +1,13 @@
+{
+  "name": "HexaLabStudio",
+  "short_name": "HexaLab",
+  "description": "Estudio de mapas UEFN para Fortnite Creative. Proyecto activo: Fortnite Multiplayer 6vs6 FPS.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#03060d",
+  "theme_color": "#00f0ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

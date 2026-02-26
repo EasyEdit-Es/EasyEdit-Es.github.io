@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+  <!-- ═══ SEO ═══ -->
+  <title>Fortnite Multiplayer — 6vs6 FPS Custom Maps | HexaLabStudio UEFN</title>
+  <meta name="description" content="Fortnite Multiplayer es el proyecto activo de HexaLabStudio: modo 6vs6 en primera persona con 4 mapas únicos, armas custom y combate competitivo. Hecho en UEFN para Fortnite Creative. Beta activa — lanzamiento 30 Junio 2026."/>
+  <meta name="keywords" content="Fortnite Multiplayer HexaLabStudio, fortnite 6v6, fortnite FPS primera persona, UEFN custom map, fortnite creative competitivo, aldea aclamada, industrias inodoras, barrio buenavista, granero grietoso, fortnite custom weapons, mapa fortnite fps, hexalabstudio, fortnite creative 2026"/>
+  <meta name="author" content="HexaLabStudio"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <meta name="theme-color" content="#00f0ff"/>
+  <link rel="canonical" href="https://www.hexalabstudio.com/fortnite-multiplayer.html"/>
+
+  <!-- ═══ OG ═══ -->
+  <meta property="og:type"         content="website"/>
+  <meta property="og:url"          content="https://www.hexalabstudio.com/fortnite-multiplayer.html"/>
+  <meta property="og:title"        content="Fortnite Multiplayer | 6vs6 FPS Custom Maps — HexaLabStudio"/>
+  <meta property="og:description"  content="Modo 6vs6 en primera persona para Fortnite Creative. 4 mapas únicos, armas custom y combate competitivo. Beta activa — lanzamiento 30 Junio 2026."/>
+  <meta property="og:image"        content="https://www.hexalabstudio.com/fortnite-banner.jpg"/>
+  <meta property="og:image:width"  content="1456"/>
+  <meta property="og:image:height" content="816"/>
+  <meta property="og:image:alt"    content="Fortnite Multiplayer 6vs6 FPS — HexaLabStudio"/>
+  <meta property="og:site_name"    content="HexaLabStudio"/>
+  <meta property="og:locale"       content="es_ES"/>
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="Fortnite Multiplayer 6vs6 FPS | HexaLabStudio"/>
+  <meta name="twitter:description" content="4 mapas únicos, armas custom, combate 6v6 en primera persona. Beta activa — Fortnite Creative UEFN."/>
+  <meta name="twitter:image"       content="https://www.hexalabstudio.com/fortnite-banner.jpg"/>
+
+  <!-- ═══ SCHEMA ═══ -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"VideoGame","name":"Fortnite Multiplayer by HexaLabStudio","description":"Modo 6vs6 FPS para Fortnite Creative con 4 mapas únicos, armas personalizadas y combate competitivo por rondas.","genre":["Shooter","FPS","Competitive"],"gamePlatform":"Fortnite Creative","publisher":{"@type":"Organization","name":"HexaLabStudio","url":"https://www.hexalabstudio.com"},"url":"https://www.hexalabstudio.com/fortnite-multiplayer.html","image":"https://www.hexalabstudio.com/fortnite-banner.jpg","datePublished":"2026-06-30"}
+  </script>
+
+  <!-- ═══ FAVICON ═══ -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="apple-touch-icon" href="favicon.svg"/>
+  <link rel="manifest" href="site.webmanifest"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <style>
+    .status-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
+    .status-pill{display:flex;align-items:center;gap:.5rem;background:var(--glass-2);border:1px solid var(--glass-b);border-radius:999px;padding:.45rem .9rem;font-family:'Share Tech Mono',monospace;font-size:.67rem;letter-spacing:.1em;color:var(--text-2)}
+    .status-dot{width:6px;height:6px;border-radius:50%}
+    .dot-cyan{background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:blink-dot 1.5s ease-in-out infinite}
+    .dot-gold{background:var(--gold);box-shadow:0 0 8px var(--gold);animation:blink-dot 1.5s ease-in-out infinite .5s}
+    .details-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:2.5rem}
+    @media(max-width:800px){.details-grid{grid-template-columns:1fr}}
+    .devlog{display:flex;flex-direction:column;margin-top:2.5rem}
+    .devlog-item{display:flex;gap:1.2rem;padding:1.2rem 0;border-bottom:1px solid var(--glass-b)}
+    .devlog-item:last-child{border-bottom:none}
+    .devlog-dot{width:34px;height:34px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.85rem;border:2px solid var(--glass-b);background:var(--dark-3)}
+    .devlog-dot.done{background:linear-gradient(135deg,var(--cyan-dark),var(--cyan));border-color:transparent;color:#000;box-shadow:0 0 14px rgba(0,240,255,.4)}
+    .devlog-dot.current{border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 16px rgba(0,240,255,.4);animation:badge-pulse 2s ease-in-out infinite}
+    .devlog-dot.pending{color:var(--muted)}
+    .devlog-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.04em;text-transform:uppercase}
+    .devlog-title.done{color:var(--cyan)}.devlog-title.current{color:var(--gold)}.devlog-title.pending{color:var(--muted)}
+    .devlog-desc{font-family:'Share Tech Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.06em;margin-top:.2rem}
+    .countdown-section{text-align:center}
+    .countdown-wrap{display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+    .countdown-unit{background:var(--glass-2);border:1px solid var(--glass-b2);border-radius:var(--radius);padding:1.4rem 1.6rem;min-width:90px;text-align:center;position:relative;overflow:hidden}
+    .countdown-unit::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--violet))}
+    .countdown-num{display:block;font-family:'Orbitron',monospace;font-size:2.8rem;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--violet-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .countdown-sep{font-family:'Orbitron',monospace;font-size:2.8rem;font-weight:900;color:rgba(0,240,255,.3);display:flex;align-items:center;animation:blink-dot 1s ease-in-out infinite}
+    .countdown-unit-label{display:block;font-family:'Share Tech Mono',monospace;font-size:.6rem;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;margin-top:.4rem}
+    .feature-list{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+    .feature-list li{display:flex;align-items:flex-start;gap:.8rem;font-size:1rem;color:var(--text-2);line-height:1.5}
+    .feature-list li::before{content:'▸';color:var(--cyan);font-size:.7rem;margin-top:.3rem;flex-shrink:0}
+    .feature-list strong{color:var(--text)}
+    .hero-logo-bg{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:flex-end;padding-right:6vw;pointer-events:none;opacity:.05}
+    .hero-logo-bg img{width:65vmin;filter:blur(2px)}
+    .discord-mini{background:linear-gradient(135deg,#1e2124,#17191c);border:1px solid rgba(88,101,242,.3);border-radius:var(--radius-lg);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap}
+    .discord-mini-text{font-family:'Share Tech Mono',monospace;font-size:.78rem;color:var(--text-2);letter-spacing:.06em}
+    .discord-mini-text strong{display:block;color:#7289da;font-size:.9rem;margin-bottom:.3rem}
+    .btn-discord{background:#5865f2;color:#fff;box-shadow:0 0 24px rgba(88,101,242,.4),0 8px 24px rgba(0,0,0,.4);white-space:nowrap}
+    .btn-discord:hover{background:#4752c4;box-shadow:0 0 44px rgba(88,101,242,.65),0 12px 32px rgba(0,0,0,.5)}
+    #sound-toggle{position:fixed;bottom:1.5rem;right:1.5rem;z-index:900;width:44px;height:44px;border-radius:50%;background:rgba(3,6,13,.88);border:1px solid var(--glass-b2);color:var(--cyan);font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:none;backdrop-filter:blur(12px);transition:all .3s;box-shadow:0 0 16px rgba(0,240,255,.1)}
+    #sound-toggle:hover{border-color:rgba(0,240,255,.4);box-shadow:0 0 24px rgba(0,240,255,.25)}
+    #sound-toggle.muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <canvas id="bg-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4;"></canvas>
+  <canvas id="pt-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;"></canvas>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <button id="sound-toggle" class="muted" aria-label="Activar sonido" title="Sonido">🔇</button>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="" class="brand-logo" aria-hidden="true"/>
+        <span class="brand-text">HEXA<span>LAB</span>STUDIO</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav"><span class="sr-only">Abrir menú</span>☰</button>
+      <nav id="main-nav" class="main-nav">
+        <a href="index.html">← Landing</a>
+        <a href="#detalles">Detalles</a>
+        <a href="#mapas">Mapas</a>
+        <a href="#estado">Estado</a>
+        <a href="index.html#discord">Discord</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero compact">
+      <div class="hero-bg">
+        <img src="fortnite-banner.jpg" alt="Fortnite Multiplayer 6vs6 FPS — HexaLabStudio UEFN custom maps Fortnite Creative"/>
+        <div class="hero-vignette"></div>
+      </div>
+      <div class="hero-logo-bg" aria-hidden="true"><img src="logo.svg" alt=""/></div>
+      <div class="scanlines" aria-hidden="true"></div>
+      <div class="hud-corner tl" aria-hidden="true"></div>
+      <div class="hud-corner tr" aria-hidden="true"></div>
+      <div class="hud-corner bl" aria-hidden="true"></div>
+      <div class="hud-corner br" aria-hidden="true"></div>
+      <div class="hud-info tl" aria-hidden="true">
+        <div class="hud-type">PROYECTO: FORTNITE_MP</div>
+        <div class="hud-clock"></div>
+      </div>
+      <div class="hud-info br" aria-hidden="true">
+        <div>MAPS: 4 / MODO: 6v6</div>
+        <div>BUILD: <span style="color:var(--gold)">BETA_0.9</span></div>
+      </div>
+      <div class="hero-inner">
+        <div>
+          <div class="kicker reveal"><span class="kicker-dot"></span><span class="kicker-line"></span>PROYECTO ACTIVO · HEXALABSTUDIO UEFN</div>
+          <h1 class="reveal delay-1">
+            <span class="line-white glitch" data-text="FORT">FORT</span>
+            <span class="line-cyan  glitch" data-text="NITE">NITE</span>
+            <span class="line-violet">MULTIPLAYER</span>
+          </h1>
+          <p class="lead reveal delay-2">Shooter en <strong style="color:var(--text)">primera persona 6vs6</strong> con rotación de mapas, armas personalizadas y combate competitivo por rondas.</p>
+          <div class="hero-ctas reveal delay-3">
+            <a class="btn btn-cyan"  href="#detalles"><span>🎯</span>Ver detalles</a>
+            <a class="btn btn-ghost" href="index.html">← Volver al inicio</a>
+          </div>
+          <div class="status-row reveal delay-4">
+            <span class="status-pill"><span class="status-dot dot-cyan"></span>Beta activa</span>
+            <span class="status-pill"><span class="status-dot dot-gold"></span>Lanzamiento 30 Jun 2026</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal delay-2">
+          <div class="hero-img-frame">
+            <img src="fortnite-banner.jpg" alt="Fortnite Multiplayer gameplay — Custom Maps And Weapons FPS HexaLabStudio"/>
+          </div>
+          <div class="hero-img-glow-ring"></div>
+          <span class="badge badge-cyan"><span class="badge-ping"></span>🔥 BETA 0.9</span>
+          <span class="badge badge-violet"><span class="badge-ping"></span>🗺️ 4 MAPAS</span>
+          <div class="img-stats">
+            <div class="img-stat"><span class="img-stat-num">6v6</span><span class="img-stat-label">Equipos</span></div>
+            <div class="img-stat"><span class="img-stat-num">4</span><span class="img-stat-label">Mapas</span></div>
+            <div class="img-stat"><span class="img-stat-num">FPS</span><span class="img-stat-label">Vista</span></div>
+            <div class="img-stat"><span class="img-stat-num">∞</span><span class="img-stat-label">Rondas</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span>FORTNITE MULTIPLAYER</span><span class="sep">◆</span><span>6VS6 FPS</span><span class="sep">◆</span><span>CUSTOM MAPS</span><span class="sep">◆</span><span>CUSTOM WEAPONS</span><span class="sep">◆</span><span>ALDEA ACLAMADA</span><span class="sep">◆</span><span>INDUSTRIAS INODORAS</span><span class="sep">◆</span><span>BARRIO BUENAVISTA</span><span class="sep">◆</span><span>GRANERO GRIETOSO</span><span class="sep">◆</span>
+        <span>FORTNITE MULTIPLAYER</span><span class="sep">◆</span><span>6VS6 FPS</span><span class="sep">◆</span><span>CUSTOM MAPS</span><span class="sep">◆</span><span>CUSTOM WEAPONS</span><span class="sep">◆</span><span>ALDEA ACLAMADA</span><span class="sep">◆</span><span>INDUSTRIAS INODORAS</span><span class="sep">◆</span><span>BARRIO BUENAVISTA</span><span class="sep">◆</span><span>GRANERO GRIETOSO</span><span class="sep">◆</span>
+      </div>
+    </div>
+
+    <!-- DETALLES -->
+    <section id="detalles" class="section section-dark">
+      <div class="container">
+        <p class="section-label reveal">Descripción del proyecto</p>
+        <h2 class="reveal delay-1">EL ÚNICO <em>PROYECTO</em> ACTIVO</h2>
+        <div class="details-grid">
+          <div class="reveal delay-1">
+            <p style="color:var(--text-2);line-height:1.75;margin-bottom:1.5rem;font-size:1.05rem;"><strong style="color:var(--text)">Fortnite Multiplayer</strong> es un modo creado en UEFN. En <strong style="color:var(--cyan)">fase beta cerrada</strong>. Cada detalle está pulido para una experiencia memorable desde el primer minuto.</p>
+            <ul class="feature-list">
+              <li><strong>Vista en primera persona:</strong> inmersión total en cada combate.</li>
+              <li><strong>Formato 6vs6:</strong> dos equipos de seis en partidas por rondas.</li>
+              <li><strong>Armas personalizadas:</strong> arsenal propio con balance competitivo.</li>
+              <li><strong>4 mapas únicos:</strong> estética, ritmo y mecánicas propias en cada uno.</li>
+              <li><strong>Rotación de mapas:</strong> variedad garantizada entre rondas.</li>
+            </ul>
+          </div>
+          <div class="reveal delay-2">
+            <div class="stats-grid" style="grid-template-columns:1fr 1fr;margin-top:0;">
+              <article class="stat-card"><span class="stat-icon">⚔️</span><span class="stat-num">6v6</span><span class="stat-label">Competitivo</span></article>
+              <article class="stat-card"><span class="stat-icon">🎯</span><span class="stat-num">FPS</span><span class="stat-label">1ª persona</span></article>
+              <article class="stat-card"><span class="stat-icon">🗺️</span><span class="stat-num">4</span><span class="stat-label">Mapas</span></article>
+              <article class="stat-card"><span class="stat-icon">🔫</span><span class="stat-num">∞</span><span class="stat-label">Weapons</span></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPAS -->
+    <section id="mapas" class="section">
+      <div class="container">
+        <p class="section-label reveal">Rotación de mapas</p>
+        <h2 class="reveal delay-1">4 MAPAS DE <em>LANZAMIENTO</em></h2>
+        <p class="reveal delay-1" style="color:var(--text-2);max-width:560px;line-height:1.75;font-size:1.05rem;">Cada mapa tiene un ritmo propio. Los tabs rotan solos — o haz clic para explorar a tu ritmo.</p>
+        <div class="maps-layout reveal delay-2">
+          <div class="maps-nav" role="tablist" aria-label="Mapas de lanzamiento">
+            <button class="map-tab active" data-map="aldea"      role="tab" aria-selected="true"><span class="map-tab-num">01</span>Aldea Aclamada<span class="map-tab-type">CQC</span></button>
+            <button class="map-tab" data-map="industrias"        role="tab" aria-selected="false"><span class="map-tab-num">02</span>Industrias Inodoras<span class="map-tab-type">MID</span></button>
+            <button class="map-tab" data-map="barrio"            role="tab" aria-selected="false"><span class="map-tab-num">03</span>Barrio Buenavista<span class="map-tab-type">FLANQUEO</span></button>
+            <button class="map-tab" data-map="granero"           role="tab" aria-selected="false"><span class="map-tab-num">04</span>Granero Grietoso<span class="map-tab-type">ABIERTO</span></button>
+          </div>
+          <div class="map-panel" role="tabpanel" id="map-panel">
+            <div class="map-panel-top">
+              <h3 id="map-title">Aldea Aclamada</h3>
+              <span class="map-type-tag">CQC · CONTROL</span>
+            </div>
+            <p id="map-description">Combates tácticos en calles estrechas, rutas laterales y control de posiciones elevadas. La densidad del mapa favorece las granadas y el juego de esquinas cerradas.</p>
+            <div class="map-traits">
+              <span class="map-trait">🏘️ Urbano</span><span class="map-trait">⚔️ CQC</span>
+              <span class="map-trait">🎯 Control de zona</span><span class="map-trait">📐 Altura táctica</span>
+            </div>
+            <div class="map-progress"><div id="map-progress-fill" style="width:25%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section section-dark countdown-section">
+      <div class="container">
+        <p class="section-label" style="justify-content:center;">Cuenta atrás</p>
+        <h2 style="text-align:center;">LANZAMIENTO <em>30 JUN 2026</em></h2>
+        <p style="color:var(--text-2);max-width:480px;margin:.5rem auto 2.5rem;line-height:1.75;text-align:center;font-family:'Share Tech Mono',monospace;font-size:.85rem;letter-spacing:.06em;">17:00 · HORA PENINSULAR ESPAÑOLA (CET)</p>
+        <div class="countdown-wrap" data-countdown>
+          <div class="countdown-unit"><span class="countdown-num" data-cd-days>00</span><span class="countdown-unit-label">Días</span></div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit"><span class="countdown-num" data-cd-hours>00</span><span class="countdown-unit-label">Horas</span></div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit"><span class="countdown-num" data-cd-mins>00</span><span class="countdown-unit-label">Minutos</span></div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit"><span class="countdown-num" data-cd-secs>00</span><span class="countdown-unit-label">Segundos</span></div>
+        </div>
+
+        <!-- Discord mini banner bajo el countdown -->
+        <div class="discord-mini reveal" style="max-width:700px;margin:2.5rem auto 0;">
+          <div class="discord-mini-text">
+            <strong>💬 ÚNETE AL DISCORD</strong>
+            Recibe el aviso exacto cuando se lance y accede a la beta.
+          </div>
+          <a class="btn btn-discord" href="https://discord.gg/hexalabstudio" target="_blank" rel="noopener noreferrer">
+            ENTRAR AL SERVIDOR
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTADO / DEV LOG -->
+    <section id="estado" class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+          <div>
+            <p class="section-label reveal">Estado del proyecto</p>
+            <h2 class="reveal delay-1">DEV <em>LOG</em></h2>
+            <div class="devlog reveal delay-2">
+              <div class="devlog-item"><div class="devlog-dot done">✓</div><div class="devlog-content"><div class="devlog-title done">Diseño de mapas</div><div class="devlog-desc">4 mapas completados y jugables</div></div></div>
+              <div class="devlog-item"><div class="devlog-dot done">✓</div><div class="devlog-content"><div class="devlog-title done">Sistema de armas</div><div class="devlog-desc">Arsenal custom implementado</div></div></div>
+              <div class="devlog-item"><div class="devlog-dot done">✓</div><div class="devlog-content"><div class="devlog-title done">Modo 6v6 FPS</div><div class="devlog-desc">Lógica de rondas funcional</div></div></div>
+              <div class="devlog-item"><div class="devlog-dot current">◉</div><div class="devlog-content"><div class="devlog-title current">Balance y optimización</div><div class="devlog-desc">EN PROGRESO — beta activa</div></div></div>
+              <div class="devlog-item"><div class="devlog-dot pending">○</div><div class="devlog-content"><div class="devlog-title pending">Lanzamiento público</div><div class="devlog-desc">30 Junio 2026 · 17:00</div></div></div>
+            </div>
+          </div>
+          <div class="reveal delay-2">
+            <div class="contact-card" style="padding:2.5rem;">
+              <p class="section-label" style="justify-content:center;">Notificaciones</p>
+              <h2 style="font-size:2.2rem;margin-bottom:.8rem;">QUIERO <em>NOTICIAS</em></h2>
+              <p style="font-size:.95rem;">¿Quieres saber cuándo se lanza? Escríbenos y te avisamos el día del lanzamiento.</p>
+              <a class="email-display" href="mailto:hexalabsstudio@gmail.com?subject=Quiero%20noticias%20del%20lanzamiento">📧 &nbsp;hexalabsstudio@gmail.com</a>
+              <a class="btn btn-cyan" href="mailto:hexalabsstudio@gmail.com?subject=Quiero%20noticias%20de%20Fortnite%20Multiplayer">🚀 Avísame del lanzamiento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="logo.svg" alt="" class="footer-logo"/>© <span id="current-year"></span> HEXALABSTUDIO</div>
+      <div class="footer-links">
+        <a href="index.html">Landing</a>
+        <a href="#mapas">Mapas</a>
+        <a href="index.html#discord">Discord</a>
+        <a href="mailto:hexalabsstudio@gmail.com">Contacto</a>
+      </div>
+      <a class="footer-back" href="#top">VOLVER ARRIBA ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
